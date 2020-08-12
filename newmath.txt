@@ -1,0 +1,12 @@
+x = 0;
+y = 1;
+z = 2;
+
+x++;
+print x;
+y--;
+print y;
+z += x;
+print z;
+z -= x;
+print z;

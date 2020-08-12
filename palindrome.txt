@@ -1,0 +1,18 @@
+prompt "Enter a string: " str;
+
+str2 = "";
+
+i = 1;
+len = strlen str;
+
+while (i <= len) {
+	str2 = str2+str[len-i:len-i];
+	i=i+1;
+}
+
+if(str == str2) {
+	print "It's a palindrome";
+} else {
+	print "It's not a palindrome";
+}
+

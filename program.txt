@@ -1,0 +1,26 @@
+function checkPalindrome(str) {
+	str2 = "";
+
+	i = 1;
+	len = strlen str;
+	print len;
+
+	while (i <= len) {
+		str2 += str[len-i:len-i];
+		print "str2: " + str2;
+		i++;
+	}
+
+	print "string: " + str;
+	print "str2: " + str2;
+
+	if(str == str2) {
+		print "It's a palindrome";
+	} else {
+		print "It's not a palindrome";
+	}
+}
+
+str = "civic";
+
+checkPalindrome(str);

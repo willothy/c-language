@@ -1,0 +1,13 @@
+num = 1;
+last1 = 1;
+last2 = 1;
+
+print last1;
+
+while (num < 10000) {
+	print num;
+	num = last1 + last2;
+	last2 = last1;
+	last1 = num;
+}
+

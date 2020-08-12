@@ -1,0 +1,320 @@
+==32102== Memcheck, a memory error detector
+==32102== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==32102== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==32102== Command: ./calc
+==32102== Parent PID: 1217
+==32102== 
+--32102-- 
+--32102-- Valgrind options:
+--32102--    --log-file=log.txt
+--32102--    --leak-check=full
+--32102--    -v
+--32102-- Contents of /proc/version:
+--32102--   Linux version 4.11.0-kali1-amd64 (devel@kali.org) (gcc version 6.4.0 20170704 (Debian 6.4.0-1) ) #1 SMP Debian 4.11.6-1kali1 (2017-06-21)
+--32102-- 
+--32102-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--32102-- Page sizes: currently 4096, max supported 4096
+--32102-- Valgrind library directory: /usr/lib/valgrind
+--32102-- Reading syms from /root/Documents/breakoutmentors-will/Main-Project/calc
+--32102-- Reading syms from /lib/x86_64-linux-gnu/ld-2.24.so
+--32102--   Considering /usr/lib/debug/.build-id/40/6841a557b6674c3e8bf7c8c6be4d23183b6088.debug ..
+--32102--   .. build-id is valid
+--32102-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--32102--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--32102--   .. CRC mismatch (computed cc94779b wanted 23911726)
+--32102--   Considering /usr/lib/debug/usr/lib/valgrind/memcheck-amd64-linux ..
+--32102--   .. CRC is valid
+--32102--    object doesn't have a dynamic symbol table
+--32102-- Scheduler: using generic scheduler lock implementation.
+--32102-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==32102== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-32102-by-root-on-???
+==32102== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-32102-by-root-on-???
+==32102== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-32102-by-root-on-???
+==32102== 
+==32102== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==32102== don't want to do, unless you know exactly what you're doing,
+==32102== or are doing some strange experiment):
+==32102==   /usr/lib/valgrind/../../bin/vgdb --pid=32102 ...command...
+==32102== 
+==32102== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==32102==   /path/to/gdb ./calc
+==32102== and then give GDB the following command
+==32102==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=32102
+==32102== --pid is optional if only one valgrind process is running
+==32102== 
+--32102-- REDIR: 0x401b250 (ld-linux-x86-64.so.2:strlen) redirected to 0x580a7611 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--32102-- REDIR: 0x4019b00 (ld-linux-x86-64.so.2:index) redirected to 0x580a762b (vgPlain_amd64_linux_REDIR_FOR_index)
+--32102-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--32102--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--32102--   .. CRC mismatch (computed 295d56e8 wanted 0e0693fa)
+--32102--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--32102--   .. CRC is valid
+--32102-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--32102--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--32102--   .. CRC mismatch (computed d787cc08 wanted 14e94c02)
+--32102--   Considering /usr/lib/debug/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--32102--   .. CRC is valid
+==32102== WARNING: new redirection conflicts with existing -- ignoring it
+--32102--     old: 0x0401b250 (strlen              ) R-> (0000.0) 0x580a7611 vgPlain_amd64_linux_REDIR_FOR_strlen
+--32102--     new: 0x0401b250 (strlen              ) R-> (2007.0) 0x04c2eea0 strlen
+--32102-- REDIR: 0x4019d20 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2ffa0 (strcmp)
+--32102-- REDIR: 0x401bd60 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c33370 (mempcpy)
+--32102-- Reading syms from /lib/x86_64-linux-gnu/libc-2.24.so
+--32102--   Considering /usr/lib/debug/.build-id/cc/80584889db7a969292959a46c718a2b1500702.debug ..
+--32102--   .. build-id is valid
+--32102-- REDIR: 0x4ebc6e0 (libc.so.6:strcasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4eb8180 (libc.so.6:strcspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4ebe9d0 (libc.so.6:strncasecmp) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4eba5f0 (libc.so.6:strpbrk) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4eba980 (libc.so.6:strspn) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4ebbd50 (libc.so.6:memmove) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4eba300 (libc.so.6:rindex) redirected to 0x4c2e830 (rindex)
+--32102-- REDIR: 0x4eb38d0 (libc.so.6:calloc) redirected to 0x4c2db50 (calloc)
+--32102-- REDIR: 0x4eb2ee0 (libc.so.6:malloc) redirected to 0x4c2bb80 (malloc)
+--32102-- REDIR: 0x4ebc200 (libc.so.6:memset) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4f611f0 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x4c32500 (memset)
+--32102-- REDIR: 0x4eba2c0 (libc.so.6:strncpy) redirected to 0x4a26740 (_vgnU_ifunc_wrapper)
+--32102-- REDIR: 0x4ecc770 (libc.so.6:__strncpy_sse2_unaligned) redirected to 0x4c2f3f0 (__strncpy_sse2_unaligned)
+--32102-- REDIR: 0x4ec26e0 (libc.so.6:strchrnul) redirected to 0x4c32ea0 (strchrnul)
+--32102-- REDIR: 0x4eb8620 (libc.so.6:strlen) redirected to 0x4c2ede0 (strlen)
+--32102-- REDIR: 0x4ebbe40 (libc.so.6:__GI_mempcpy) redirected to 0x4c330a0 (__GI_mempcpy)
+==32102== Invalid read of size 8
+==32102==    at 0x10BB59: vAppend (vector.c:22)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== Invalid write of size 8
+==32102==    at 0x10BB88: vAppend (vector.c:27)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== Invalid read of size 8
+==32102==    at 0x10BB4D: vAppend (vector.c:23)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== Invalid read of size 8
+==32102==    at 0x10BBB5: vLen (vector.c:33)
+==32102==    by 0x10BFAD: evaluate (main.c:15)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== Invalid read of size 8
+==32102==    at 0x10BBA8: vLen (vector.c:35)
+==32102==    by 0x10BFAD: evaluate (main.c:15)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== Invalid read of size 8
+==32102==    at 0x10BBE9: vGet (vector.c:46)
+==32102==    by 0x10BF89: evaluate (main.c:16)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== Invalid read of size 8
+==32102==    at 0x10BBB5: vLen (vector.c:33)
+==32102==    by 0x10BD66: varFind (vector.c:85)
+==32102==    by 0x10BD95: varExists (vector.c:95)
+==32102==    by 0x10BE07: varSet (vector.c:108)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51dcaf8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x10C325: main (main.c:98)
+==32102== 
+==32102== Invalid read of size 8
+==32102==    at 0x10BBB5: vLen (vector.c:33)
+==32102==    by 0x10BD66: varFind (vector.c:85)
+==32102==    by 0x10BE2A: varSet (vector.c:110)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51dcaf8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x10C325: main (main.c:98)
+==32102== 
+==32102== Invalid write of size 4
+==32102==    at 0x10BE31: varSet (vector.c:110)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==32102== 
+==32102== 
+==32102== Process terminating with default action of signal 11 (SIGSEGV)
+==32102==  Access not within mapped region at address 0x8
+==32102==    at 0x10BE31: varSet (vector.c:110)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  If you believe this happened as a result of a stack
+==32102==  overflow in your program's main thread (unlikely but
+==32102==  possible), you can try to increase the size of the
+==32102==  main thread stack using the --main-stacksize= flag.
+==32102==  The main thread stack size used in this run was 8388608.
+--32102-- REDIR: 0x4eb34e0 (libc.so.6:free) redirected to 0x4c2cdb0 (free)
+==32102== 
+==32102== HEAP SUMMARY:
+==32102==     in use at exit: 20,994 bytes in 17 blocks
+==32102==   total heap usage: 18 allocs, 1 frees, 22,018 bytes allocated
+==32102== 
+==32102== Searching for pointers to 17 not-freed blocks
+==32102== Checked 69,912 bytes
+==32102== 
+==32102== 128 (16 direct, 112 indirect) bytes in 2 blocks are definitely lost in loss record 12 of 14
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BB70: vAppend (vector.c:25)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== LEAK SUMMARY:
+==32102==    definitely lost: 16 bytes in 2 blocks
+==32102==    indirectly lost: 112 bytes in 2 blocks
+==32102==      possibly lost: 0 bytes in 0 blocks
+==32102==    still reachable: 20,866 bytes in 13 blocks
+==32102==         suppressed: 0 bytes in 0 blocks
+==32102== Reachable blocks (those to which a pointer was found) are not shown.
+==32102== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==32102== 
+==32102== ERROR SUMMARY: 16 errors from 10 contexts (suppressed: 0 from 0)
+==32102== 
+==32102== 1 errors in context 1 of 10:
+==32102== Invalid write of size 4
+==32102==    at 0x10BE31: varSet (vector.c:110)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==32102== 
+==32102== 
+==32102== 1 errors in context 2 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BBB5: vLen (vector.c:33)
+==32102==    by 0x10BD66: varFind (vector.c:85)
+==32102==    by 0x10BE2A: varSet (vector.c:110)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51dcaf8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x10C325: main (main.c:98)
+==32102== 
+==32102== 
+==32102== 1 errors in context 3 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BBB5: vLen (vector.c:33)
+==32102==    by 0x10BD66: varFind (vector.c:85)
+==32102==    by 0x10BD95: varExists (vector.c:95)
+==32102==    by 0x10BE07: varSet (vector.c:108)
+==32102==    by 0x10C05F: evaluate (main.c:33)
+==32102==    by 0x10BF99: evaluate (main.c:17)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51dcaf8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x10C325: main (main.c:98)
+==32102== 
+==32102== 
+==32102== 1 errors in context 4 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BBE9: vGet (vector.c:46)
+==32102==    by 0x10BF89: evaluate (main.c:16)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== 
+==32102== 1 errors in context 5 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BB4D: vAppend (vector.c:23)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== 
+==32102== 2 errors in context 6 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BBA8: vLen (vector.c:35)
+==32102==    by 0x10BFAD: evaluate (main.c:15)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== 
+==32102== 2 errors in context 7 of 10:
+==32102== Invalid write of size 8
+==32102==    at 0x10BB88: vAppend (vector.c:27)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== 
+==32102== 3 errors in context 8 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BBB5: vLen (vector.c:33)
+==32102==    by 0x10BFAD: evaluate (main.c:15)
+==32102==    by 0x10C33B: main (main.c:99)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== 
+==32102== 3 errors in context 9 of 10:
+==32102== Invalid read of size 8
+==32102==    at 0x10BB59: vAppend (vector.c:22)
+==32102==    by 0x109167: yyparse (parser.y:29)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102==  Address 0x51d70c8 is 0 bytes after a block of size 8 alloc'd
+==32102==    at 0x4C2DC05: calloc (vg_replace_malloc.c:711)
+==32102==    by 0x10BCA2: vNew (vector.c:68)
+==32102==    by 0x109195: yyparse (parser.y:34)
+==32102==    by 0x10C31B: main (main.c:96)
+==32102== 
+==32102== ERROR SUMMARY: 16 errors from 10 contexts (suppressed: 0 from 0)
